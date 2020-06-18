@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Game</title>
+    <link rel="shortcut icon" href="" type="" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <nav></nav>
+      <section>
+        <div class="container">
+          <p class="text">Попробуйте угадать число от 1 до 99, которое задумал <br> Панель расположенная ниже поможет вам...</p>
+          <div class="bloc">
+            <input type="text" id="txt">
+            <button class="button" onclick="displayNumbrer();">Проверить</button>
+            <p id="rez2"></p>
+            <input type="range" id="nr" min="1" max="99" class="myRange" oninput="catchNumber();">
+            <p id="gen"></p>
+            <p id="rez1"></p>
+            <div class="bloc">
+              <button class="buttonRestsrt" onclick="restart();">Новая игра!</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

@@ -1,37 +1,40 @@
-let nr = 0;
-restart(nr);
+let gessNumber = Math.floor(Math.random() * 100);
 
-function cathNumber() {
-  let message = "";
-  let numberValue = document.getElementById("nr").value;
-  message =
-    numberValue >= nr - 10 && numberValue <= nr + 10 ? "Тепло" : "Холодно";
-  if (numberValue == nr) {
-    message = "<span class='win'>Вы угадали!!!</span>";
+function catchNumber() {
+  let temperatureMessage = "";
+  let suggestioNumber = document.getElementById("suggestNumber").value;
+  if (suggestioNumber == gessNumber) {
+    temperatureMessage = "Вы угадали!!!";
+  } else {
+    temperatureMessage =
+      suggestioNumber >= gessNumber - 10 && suggestioNumber <= gessNumber + 10
+        ? "Тепло"
+        : "Холодно";
   }
-  document.getElementById("rez1").textContent = massege;
-  document.getElementById("gen").innerHTML = numberValue;
+  document.getElementById("tempMessage").innerHTML = temperatureMessage;
+  document.getElementById("showSuggestionNumber").textContent = suggestioNumber;
 }
 
-function displayNumbrer() {
-  let numVal = document.getElementById("txt").value;
+function chеckingNumber() {
+  let inputNumber = document.getElementById("inputNumber").value;
   let templ = /^[0-9]{1,2}$/;
-  let messag = "";
-  if (!templ.test(numVal)) {
-    messag = "Введите целое число из одной или двух цыфр!";
-  } else if (!(numVal == nr)) {
-    messag = "Попробуй еще!";
+  let correctingMessage;
+  if (!templ.test(inputNumber)) {
+    correctingMessage = "Введите целое число из одной или двух цыфр!";
+  } else if (!(inputNumber == gessNumber)) {
+    correctingMessage = "Попробуй еще!";
   } else {
-    messag = "Ура! Ты угадал число!";
+    correctingMessage = "Ура! Ты угадал число!";
   }
-  document.getElementById("rez2").textContent = messag;
+  document.getElementById("correctingMessage").textContent = correctingMessage;
 }
 
 function restart() {
-  nr = Math.floor(Math.random(nr) * 99);
-  document.getElementById("rez1").innerHTML = "";
-  document.getElementById("rez2").innerHTML = "";
-  document.getElementById("txt").value = "";
-  document.getElementById("nr").value = "";
-  document.getElementById("gen").innerHTML = "";
+  gessNumber = Math.floor(Math.random() * 100);
+  document.getElementById("tempMessage").innerHTML = "Выберите число";
+  document.getElementById("correctingMessage").innerHTML = "";
+  document.getElementById("inputNumber").value = "";
+  document.getElementById("suggestNumber").value = "";
+  document.getElementById("showSuggestionNumber").innerHTML = "";
 }
+

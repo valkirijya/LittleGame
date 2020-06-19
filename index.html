@@ -16,16 +16,29 @@
       <nav></nav>
       <section>
         <div class="container">
-          <p class="text">Попробуйте угадать число от 1 до 99, которое задумал <br> Панель расположенная ниже поможет вам...</p>
+          <p class="text">
+            Попробуйте угадать число от 1 до 99, которое задумал <br />
+            Панель расположенная ниже поможет вам...
+          </p>
           <div class="bloc">
-            <input type="text" id="txt">
-            <button class="button" onclick="displayNumbrer();">Проверить</button>
-            <p id="rez2"></p>
-            <input type="range" id="nr" min="1" max="99" class="myRange" oninput="catchNumber();">
-            <p id="gen"></p>
-            <p id="rez1"></p>
+            <input type="text" id="inputNumber"/>
+            <button class="button" onclick="chеckingNumber();">
+              Проверить
+            </button>
+            <p id="correctingMessage"></p>
+            <input
+              type="range"
+              id="suggestNumber"
+              min="1"
+              max="99"
+              oninput="catchNumber();"
+            />
+            <p id="showSuggestionNumber"></p>
+            <p id="tempMessage">Выберите число</p>
             <div class="bloc">
-              <button class="buttonRestsrt" onclick="restart();">Новая игра!</button>
+              <button class="buttonRestart" onclick="restart();">
+                Новая игра!
+              </button>
             </div>
           </div>
         </div>

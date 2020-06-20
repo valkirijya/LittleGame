@@ -1,0 +1,88 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.4em;
+}
+
+.header {
+  width: 100%;
+  padding: 2vw 0;
+  background-color: dimgray;
+  color: white;
+  font-size: 3em;
+}
+
+.bloc {
+  padding: 1vw 0;
+}
+
+#inputNumber {
+  padding: 10px;
+  text-align: center;
+  background-color: #fdfbe4;
+}
+
+#inputNumber,
+.button {
+  font-size: 0.8em;
+  border: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 4px grey;
+          box-shadow: 4px 4px 4px grey;
+}
+
+#inputNumber:focus,
+.button:focus {
+  outline: none;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  background-color: #969595;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: #ffbf60;
+  color: dimgray;
+  -webkit-box-shadow: 4px 4px 4px #977056;
+          box-shadow: 4px 4px 4px #977056;
+  cursor: pointer;
+}
+
+#suggestNumber {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 45%;
+  height: 6px;
+  -webkit-box-shadow: 4px 4px 4px grey;
+          box-shadow: 4px 4px 4px grey;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #d4d4d4;
+}
+
+#suggestNumber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #d4d4d4;
+  -webkit-box-shadow: 4px 4px 4px grey;
+          box-shadow: 4px 4px 4px grey;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#suggestNumber::-webkit-slider-thumb:hover {
+  background: #ffbf60;
+}

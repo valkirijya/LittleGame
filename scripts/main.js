@@ -37,4 +37,3 @@ function restart() {
   document.getElementById("suggestNumber").value = "";
   document.getElementById("showSuggestionNumber").innerHTML = "";
 }
-

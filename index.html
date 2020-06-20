@@ -2,44 +2,36 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Little Game</title>
-    <link rel="shortcut icon" href="" type="" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">Проверь свою интуицию</header>
     <main>
-      <nav></nav>
-      <section>
-        <div class="container">
-          <p class="text">
-            Попробуйте угадать число от 1 до 99, которое задумал <br />
-            Панель расположенная ниже поможет вам...
-          </p>
+      <section class="container">
+        <p class="text">
+          Попробуйте угадать число от 1 до 99, которое выбрала вселенная...
+        </p>
+        <div class="bloc">
+          <input type="text" id="inputNumber" placeholder="Введите номер" />
+          <button class="button" onclick="chеckingNumber();">
+            Проверить
+          </button>
+          <p id="correctingMessage"></p>
+          <input
+            type="range"
+            id="suggestNumber"
+            min="1"
+            max="99"
+            oninput="catchNumber();"
+          />
+          <p id="showSuggestionNumber"></p>
+          <p id="tempMessage">Выберите число</p>
           <div class="bloc">
-            <input type="text" id="inputNumber"/>
-            <button class="button" onclick="chеckingNumber();">
-              Проверить
+            <button class="button" onclick="restart();">
+              Новая игра!
             </button>
-            <p id="correctingMessage"></p>
-            <input
-              type="range"
-              id="suggestNumber"
-              min="1"
-              max="99"
-              oninput="catchNumber();"
-            />
-            <p id="showSuggestionNumber"></p>
-            <p id="tempMessage">Выберите число</p>
-            <div class="bloc">
-              <button class="buttonRestart" onclick="restart();">
-                Новая игра!
-              </button>
-            </div>
           </div>
         </div>
       </section>

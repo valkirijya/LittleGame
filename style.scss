@@ -1,7 +1,76 @@
-#tickmarks {
-  display: block;
-  option {
-    width: max-content;
-    color: black;
+$box-shadow: 4px 4px 4px grey;
+$hover: #ffbf60;
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.4em;
+}
+
+.header {
+  width: 100%;
+  padding: 2vw 0;
+  background-color: dimgray;
+  color: white;
+  font-size: 3em;
+}
+
+.bloc {
+  padding: 1vw 0;
+}
+
+#inputNumber {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(253, 251, 228);
+}
+
+#inputNumber,
+.button {
+  font-size: 0.8em;
+  border: hidden;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  &:focus {
+    outline: none;
   }
 }
+
+.button {
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(150, 149, 149);
+  transition: all 0.5s;
+  &:hover {
+    background-color: $hover;
+    color: dimgray;
+    box-shadow: 4px 4px 4px rgb(151, 112, 86);
+    cursor: pointer;
+  }
+}
+
+#suggestNumber {
+  appearance: none;
+  width: 45%;
+  height: 6px;
+  box-shadow: $box-shadow;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #d4d4d4;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #d4d4d4;
+    box-shadow: $box-shadow;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      background: $hover;
+    }
+  }
+}
+
